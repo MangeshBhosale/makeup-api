@@ -1,13 +1,11 @@
 const getMakeup = async () => {
-  try {
+ 
     const url = `http://makeup-api.herokuapp.com/api/v1/products.json/`;
     const res = await fetch(url);
     const makeup = await res.json();
     createMakeUpCard(makeup);
     // console.log(makeup);
-  } catch (error) {
-    console.log(error);
-  }
+
 };
 
 function createMakeUpCard(makeup) {
